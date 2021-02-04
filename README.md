@@ -1,1 +1,1 @@
-# Electrovit
+# Epam internal courses
