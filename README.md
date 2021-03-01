@@ -1,1 +1,1 @@
-# Epam internal courses
+# Lesson_3. script operations
