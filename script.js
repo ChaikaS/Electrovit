@@ -1,124 +1,72 @@
-/* 
-   Data types.
-   Primitives:
-   -Number
-   -String
-   -undefined
-   -Boolean
-   -Symbol
-   -BigInt
-   -null
-   Complex: 
-   -Object
-   -function
-   */
-let a = 4
-console.log(a);
-//variable this is Number
-console.log(typeof a); //Number
+///class work
 
-let b = "world"
-console.log(b);
-//variable b its word, for js its String
-console.log(typeof b); //String
+const payment = {
+   "apple": 12,
+   "water": 0.5,
+   "wine": 25
+};
 
-//at concatenaning a number and a string, we get String
-console.log(a + b);
-console.log(typeof (a + b)); //String
+const VAT = 0.25;
+
+const goodsWithVat = Object.entries(payment)
+   .reduce((accum, curr, _i) => {
+      const [key, value] = curr;
+      accum[key] = value * (1 + VAT);
+      return accum;
+   }, {})
+
+console.log('\t Name \t + \t \t Price');
+console.log('\t+++++++++++++++++++');
+
+Object.entries(goodsWithVat)
+   .forEach(([key, value]) => {
+      console.log(`\t${key} \t + \t ${value}`);
+   });
 
 
-//at adding a number and a number in quotes, we get String
-console.log(5 + '5'); //String
-console.log(typeof (5 + '5')); //String
-
-//at subtracting, multiplying, diving, we get Number
-console.log(a - b); //NaN т.е. значение не число
-console.log(a * b); //NaN т.е. значение не число
-console.log(a / b); //NaN т.е. значение не число
-console.log(typeof (a - b)); //Number
-console.log(typeof (a * b)); //Number
-console.log(typeof (a / b)); //Number
-
-// explicit types conversion.
-//get number for string
-console.log(typeof (Number(b))); //Number
-
-//get string for number
-console.log(typeof (String(a))); //String
+///home task
 
 
-//the fastest way to get Number from strig is to add + character
-console.log(typeof (+ b)); //Number
+function randn_bm() {
+   let u = 0, v = 0;
+   while (u === 0) u = Math.random();
+   while (v === 0) v = Math.random();
+   return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v) * 2 | 0;
+};
 
-//Automatic types conversion
-//if multiplying, diving, subtracting a number in qoutes on a number in quotes(i.e. a string), we get Number
-//(/, -, * get a numeric conversion of the string)
-console.log("5" + '5'); //25
-console.log("5" - '5'); //0
-console.log("5" / '5'); //1
-console.log("5" * '5'); //25
-console.log(typeof ("5" + '5')); //String
-console.log(typeof ("5" - '5')); //Number
-console.log(typeof ("5" / '5')); //Number
-console.log(typeof ("5" * '5')); //Number
 
-//if multipuing a string on a string, we get Number
-console.log(typeof ('c' * 'd'));
-console.log(typeof ("с" - 'd'));
-console.log(typeof ("с" / 'd'));
+let n = 10;
+let arr = []
+let result = {}
+for (let i = 0; i < n; i++) {
+   arr.push(randn_bm())
+}
 
-//Boolean conversion
-console.log(typeof (Boolean(a)));
-console.log(Boolean(a)); //true
-console.log(typeof (Boolean(b)));
-console.log(Boolean(b)); //true
-
-console.log(Boolean(" ")); //true
-console.log(Boolean("")); //false
-console.log(Boolean("0")); //true
-
-//compulsory reduction to Boolean
-console.log(!!a); // true
-console.log(typeof (!!a));
-
-//always false
-console.log('');
-console.log(Boolean(0));
-console.log(Boolean(null));
-console.log(Boolean(undefined));
-console.log(Boolean(NaN))
-console.log(Boolean(false));
-
-//always true
-console.log(Boolean('0' == false));
-console.log(Boolean(0 == false));
-console.log(Boolean('0' == 0));
-console.log(Boolean(null == undefined));
-
-//infinity && -infinity
-console.log(1 / 0);
-console.log(1 / -0);
-console.log(0);
-console.log(-0);
-
-console.log(true + false); // 1
-console.log('true' == true); // false
-console.log(false == 'false'); // false
-console.log("foo" + + "bar"); // 'fooNaN'
+console.log(arr);
+document.write(arr + ' наш сгенерированный массив <br>')
+document.write('<br>')
 
 
 
+arr.forEach((item) => {
+   if (result[item] != undefined)
+      result[item]++;
+   else
+      result[item] = 1;
+})
 
-//variable declaration
 
-console.log(v);// undefined
-var v = 25;
-console.log(v);
+// for (let i = 0; i < arr.length; i++) {
+//    let value = arr[i];
+//    if (result[value] != undefined)
+//       result[value]++;
+//    else
+//       result[value] = 1;
+// }
 
-// console.log(g);// Identifier 'v' has already been declared
-let g = 35;
-console.log(g);
 
-// console.log(p);// Cannot access 'p' before initialization
-const p = 45;
-console.log(p);
+
+for (let key in result)
+   document.write('число ' + key + ' == ' + result[key] + ' раз(а) <br>');
+
+
