@@ -42,11 +42,6 @@ for (let i = 0; i < n; i++) {
    arr.push(randn_bm())
 }
 
-console.log(arr);
-document.write(arr + ' наш сгенерированный массив <br>')
-document.write('<br>')
-
-
 
 arr.forEach((item) => {
    if (result[item] != undefined)
@@ -55,18 +50,4 @@ arr.forEach((item) => {
       result[item] = 1;
 })
 
-
-// for (let i = 0; i < arr.length; i++) {
-//    let value = arr[i];
-//    if (result[value] != undefined)
-//       result[value]++;
-//    else
-//       result[value] = 1;
-// }
-
-
-
-for (let key in result)
-   document.write('число ' + key + ' == ' + result[key] + ' раз(а) <br>');
-
-
+console.table(result)
