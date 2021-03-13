@@ -38,13 +38,16 @@ function randn_bm() {
 let n = 10;
 let arr = []
 let result = {}
-for (let i = 0; i < n; i++) {
-   arr.push(randn_bm())
+function cycle() {
+   for (let i = 0; i < n; i++) {
+      arr.push(randn_bm())
+   }
 }
+cycle()
 
 
 arr.forEach((item) => {
-   if (result[item] != undefined)
+   if (result[item])
       result[item]++;
    else
       result[item] = 1;
