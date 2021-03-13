@@ -50,4 +50,5 @@ arr.forEach((item) => {
       result[item] = 1;
 })
 
+
 console.table(result)

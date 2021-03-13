@@ -1,1 +1,1 @@
-# Lesson_3. script operations
+# Lesson_4. Curve Gaussian
