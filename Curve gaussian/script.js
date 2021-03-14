@@ -26,7 +26,6 @@ Object.entries(goodsWithVat)
 
 ///home task
 
-
 function randn_bm() {
    let u = 0, v = 0;
    while (u === 0) u = Math.random();
@@ -35,23 +34,27 @@ function randn_bm() {
 };
 
 
-let n = 10;
-let arr = []
-let result = {}
-function cycle() {
-   for (let i = 0; i < n; i++) {
+let resultObject = {}
+
+function generateRandomNumbers(numberOfRepetitions) {
+   let arr = []
+   for (let i = 0; i < numberOfRepetitions; i++) {
       arr.push(randn_bm())
    }
+   return arr
 }
-cycle()
+generateRandomNumbers()
 
 
-arr.forEach((item) => {
-   if (result[item])
-      result[item]++;
-   else
-      result[item] = 1;
-})
+function countQuantityOfCorrespondingNumbers() {
+   generateRandomNumbers(10).forEach((item) => {
+      if (resultObject[item])
+         resultObject[item]++;
+      else
+         resultObject[item] = 1;
+   })
+}
+countQuantityOfCorrespondingNumbers()
 
 
-console.table(result)
+console.table(resultObject)
