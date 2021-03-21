@@ -1,1 +1,1 @@
-# Lesson_5. Object Gauss
+Lesson 6. Memory management
