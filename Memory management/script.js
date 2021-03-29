@@ -11,10 +11,10 @@ console.log(window.performance.memory);
 
 
 
-var theThing = null;
-var replaceThing = function () {
-   var originalThing = theThing;
-   var unused = function () {
+let theThing = null;
+let replaceThing = function () {
+   let originalThing = theThing;
+   let unused = function () {
       if (originalThing)
          console.log("hi");
    };
