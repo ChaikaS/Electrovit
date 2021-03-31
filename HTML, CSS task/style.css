@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
 @charset "UTF-8";
 * {
    padding: 0;
@@ -86,24 +88,13 @@ h6 {
    font-weight: 400;
 }
 /*--------------------*/
-
-.header {
-   display: flex;
-   justify-content: space-between;
+.wrapper {
+   max-width: 1300px;
+   margin: 0 auto;
+   font-family: "Montserrat";
 }
-.header__logo {
-   margin-left: calc(80px);
-   margin-top: calc(43px);
-}
-.header__menu {
-   margin-right: calc(80px);
-   margin-top: calc(43px);
-   width: 31px;
-   height: 15px;
-}
-
 .backgroungHeaderCreativeAgencyHistoryOfAgency::after {
-   background-image: url("../HTML, CSS task/Images and icon/background\ header.svg");
+   background-image: url("../Images and icon/background\ header.svg");
    background-repeat: no-repeat;
    background-position: 0 0;
    background-size: cover;
@@ -116,4 +107,71 @@ h6 {
    right: 0;
    position: absolute;
    z-index: -1;
+}
+
+/*--------------------*/
+
+.header {
+   display: flex;
+   justify-content: space-between;
+}
+.header__logo {
+   margin-left: 6.15%;
+   margin-top: 3%;
+}
+.header__logo_acad {
+   font-size: 18px;
+   color: #60606e;
+   text-transform: uppercase;
+}
+.header__menu {
+   margin-right: 6.15%;
+   margin-top: 3%;
+   width: 31px;
+   height: 15px;
+}
+
+/*--------------------*/
+
+.main__creativeAgency {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.main__creativeAgency_were {
+   width: 100px;
+   height: 100%;
+   background-color: #7beec7;
+   margin-top: 167px;
+   color: #60606e;
+   font-size: 18px;
+   text-transform: uppercase;
+   text-align: center;
+   vertical-align: middle;
+}
+.main__creativeAgency_were_text {
+   padding-top: 11px;
+   padding-bottom: 7px;
+}
+.main__creativeAgency_creativeAgency {
+   width: 556px;
+   height: 100%;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 48px;
+   color: #60606e;
+   border: solid #60606e 7px;
+}
+.main__creativeAgency_creativeAgency_text {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+.main__creativeAgency_info {
+   width: 537px;
+   height: 100%;
+   margin-top: 30px;
+   text-align: center;
+   color: #60606e;
+   font-size: 16px;
+   line-height: 25px;
 }
