@@ -1,25 +1,37 @@
 
-.main__sending-form {
+.main__sending-form-wrapper {
+      display: flex;
+   justify-content: space-between;
+}
+.main__sending-form-wrapper::after {
+   background-position: 0 0;
+   content: "";
+   height: 323px;
+   opacity: 1;
+   top: 3292px;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   z-index: -1;
    background-color: #7BEEC7;
+
    display: flex;
    justify-content: space-between;
+}
+.main__sending-form {
    margin-top: 154px;
-   margin-left: -80px;
-   margin-right: -80px;
    padding-top: 51px;
    padding-bottom: 50px;
 }
 .main__sending-form-button-h1 {
    max-width: 500px;
-   margin-left: 80px;
-   margin-right: 97px;
    margin-bottom: 28px;
    @include fontsH1("Montserrat", 30px);
    line-height: 50px;   
    color: #FFFFFF;
 }
 .main__sending-form-button-button{
-   margin-left: 80px;
    width: 166px;
    height: 51px;
    @include fontsH1("Montserrat", 14px);
@@ -34,7 +46,6 @@
       }
 }
 .main__sending-form-email {
-   margin-right: 84px;
    padding: 21px 26px 18px 27px;
    background-color: #fff;
 }
