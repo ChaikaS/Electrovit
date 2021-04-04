@@ -1,59 +1,67 @@
-.main__why-choose-us {
-   margin-bottom: 150px;
-}
-.main__why-choose-us-info {
-text-align: center
-}
+// .main__why-choose-us {
+//   margin-bottom: 150px;
+// }
+// .main__why-choose-us-info {
+//   text-align: center;
+// }
 
-
-.main__why-choose-us-info-h1 {
-   @include fontsH1("Montserrat", 30px);
-   div {
-      margin-left: 389px / 1010px * 100%;
-   }
-}
-.green-rentangle {
-   @extend %greenRentangle;
-   margin-top: -15px;
-}
-.main__why-choose-us-info-text {
-   padding-top: 10px;
-   padding-bottom: 101px;
-   max-width: 717px;
-   @include fontsText("Open Sans", 16px);
-   margin: 0 auto;
-}
-.main__why-choose-us-advantage {
-   display: flex;
-   justify-content: space-between;
-}
-.main__why-choose-us-advantage-menu {
-   display: flex;
-   flex-wrap: wrap;
-   margin-top: 20px;
-   margin-bottom: 39px;
-}
-.main__why-choose-us-advantage-menu-unlimited,
-.main__why-choose-us-advantage-menu-design,
-.main__why-choose-us-advantage-menu-e-commerge,
-.main__why-choose-us-advantage-menu-customizable-design {
-   width: 341px;
-   height: 200px;
-}
-.main__why-choose-us-menu-universal-h1 {
-   @include fontsH1("Montserrat", 18px);
-   margin-top: 19px;
-   margin-bottom: 18px;
-}
-.main__why-choose-us-menu-universal-item {
-   margin-bottom: 11px;
-   @include fontsText("Open Sans", 14px);
-   text-transform: uppercase;
-   &:last-child {
-      margin-bottom: 0;
-   }
-}
-.main__why-choose-us-advantage-menu-e-commerge,
-.main__why-choose-us-advantage-menu-customizable-design {
-   margin-top: 40px;
-}
+// .main__why-choose-us-info-h1 {
+//   @include fontsH1("Montserrat", 30px);
+//   div {
+//     margin-left: 389px / 1010px * 100%;
+//   }
+// }
+// .green-rentangle {
+//   @extend %greenRentangle;
+// }
+// .main__why-choose-us-info-text {
+//   padding-top: 10px;
+//   padding-bottom: 101px;
+//   max-width: 717px;
+//   @include fontsText("Open Sans", 16px);
+//   margin: 0 auto;
+// }
+// .main__why-choose-us-advantage {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .main__why-choose-us-advantage-menu {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-top: 20px;
+//   margin-bottom: 39px;
+// }
+// .main__why-choose-us-advantage-menu-unlimited,
+// .main__why-choose-us-advantage-menu-design,
+// .main__why-choose-us-advantage-menu-e-commerge,
+// .main__why-choose-us-advantage-menu-customizable-design {
+//   width: 341px;
+//   height: 200px;
+// }
+// .main__why-choose-us-menu-universal-h1 {
+//   @include fontsH1("Montserrat", 18px);
+//   margin-top: 19px;
+//   margin-bottom: 18px;
+// }
+// .main__why-choose-us-menu-universal-item {
+//   margin-bottom: 11px;
+//   @include fontsText("Open Sans", 14px);
+//   text-transform: uppercase;
+//   color: #999999;
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
+// .main__why-choose-us-menu-universal-item a {
+//   color: #999999;
+// }
+// .main__why-choose-us-advantage-menu-e-commerge,
+// .main__why-choose-us-advantage-menu-customizable-design {
+//   margin-top: 40px;
+// }
+// @media (max-width: 1300px) {
+// }
+// @media (max-width: 768px) {
+// }
+// @media (max-width: 320px) {
+// }

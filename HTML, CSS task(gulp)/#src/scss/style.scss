@@ -1,28 +1,78 @@
 .wrapper {
-   max-width: 1300px;
-   margin: 0 auto;
-   padding: 43px 80px 49px 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 43px;
+  padding-right: 80px;
+  padding-bottom: 49px;
+  padding-left: 80px;
 }
 
-@mixin fontsH1 ($fontFamily, $fontSize){   
-text-transform: uppercase;
-color: #60606E;
-font-family: $fontFamily;
-font-size: $fontSize;   
+@mixin fontsH1($fontFamily, $fontSize) {
+  text-transform: uppercase;
+  color: #60606e;
+  font-family: $fontFamily;
+  font-size: $fontSize;
 }
 
-@mixin fontsText ($fontFamily, $fontSize){
-   color: #60606E;
-   font-family: $fontFamily;
-   font-size: $fontSize;  
-   line-height: 25px;    
+@mixin fontsText($fontFamily, $fontSize) {
+  color: #60606e;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: normal;
 }
+
+@mixin adaptiv-value(
+  $property,
+  $startSize,
+  $minSize,
+  $maxWidthConteiner,
+  $type
+) {
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+    //только если меньше контейнера
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxWidthConteiner + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} *
+          ((100vw - 320px) / #{$maxWidthConteiner - 320})
+      );
+    }
+  } @else if $type==2 {
+    //только если больше контейнера
+    #{$property}: $startSize + px;
+    @media (min-width: #{$maxWidthConteiner + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+      );
+    }
+  } @else {
+    //всегда
+    #{$property}: calc(
+      #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+    );
+  }
+}
+
 %greenRentangle {
-   width: 69px;
-   height: 22px;
-   background-color: #7beec7;
+  width: 69px;
+  height: 22px;
+  background-color: #7beec7;
+  margin-top: -14px;
 }
 
+@media (max-width: 1300px) {
+  .wrapper {
+    padding-top: calc(10px + (43 - 10) * ((100vw - 320px) / (1300 - 320)));
+    padding-right: calc(20px + (80 - 20) * ((100vw - 320px) / (1300 - 320)));
+    padding-bottom: calc(12px + (49 - 10) * ((100vw - 320px) / (1300 - 320)));
+    padding-left: calc(20px + (80 - 20) * ((100vw - 320px) / (1300 - 320)));
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 320px) {
+}
 
 @import "0.nullStyle.scss";
 @import "1.header.scss";
@@ -32,5 +82,3 @@ font-size: $fontSize;
 @import "5.mainSection4.scss";
 @import "6.mainSection5.scss";
 @import "7.footer.scss";
-
-
