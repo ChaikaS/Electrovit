@@ -1,1 +1,3 @@
-Lesson 6. Memory management
+# Lesson 7. inheritance
+
+
