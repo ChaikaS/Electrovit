@@ -1,9 +1,18 @@
+.wrapper {
+  margin: 0 auto;
+  @include adaptiv-value("max-width", 1300, 325, 1300, 0);
+  @include adaptiv-value("padding-top", 43, 11, 1300, 0);
+  @include adaptiv-value("padding-right", 80, 20, 1300, 0);
+  @include adaptiv-value("padding-bottom", 49, 12.5, 1300, 0);
+  @include adaptiv-value("padding-left", 87, 20, 1300, 0);
+}
+
 .backgroung-header::after {
   background-image: url("../img/background header.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
-  height: 885px;
+  @include adaptiv-value("height", 865, 217, 1300, 0);
   content: "";
   opacity: 0.3;
   top: 0;
@@ -72,42 +81,8 @@
 }
 
 @media (max-width: 1300px) {
-  .backgroung-header::after {
-    @include adaptiv-value("height", 885, 221, 1300, 1);
-  }
 }
 @media (max-width: 768px) {
 }
 @media (max-width: 320px) {
 }
-
-// @media (max-width: 1300px) {
-//   .header__logo {
-//     @include fontsH1("Montserrat", 14px);
-//   }
-//   .backgroung-header::after {
-//     height: 650px;
-//   }
-// }
-// @media (max-width: 768px) {
-// }
-// @media (max-width: 320px) {
-// }
-
-// .header {
-//   display: flex;
-//   justify-content: space-between;
-// }
-// .header__logo {
-//   @include fontsH1("Montserrat", 18px);
-//   display: flex;
-//   align-items: center;
-// }
-// .header__menu {
-//   margin-top: 15px;
-// }
-// .header__menu:hover {
-//   transform: rotate(360deg);
-//   transition-duration: 1s;
-//   color: #60606e;
-// }

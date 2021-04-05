@@ -1,33 +1,41 @@
 .main__history-of-agency {
   display: flex;
-  justify-content: space-around;
-  margin-top: 123px;
-  margin-bottom: 149px;
+  justify-content: space-between;
+  @include adaptiv-value("margin-top", 123, 30.7, 1300, 0);
+  @include adaptiv-value("margin-bottom", 149, 37.2, 1300, 0);
 }
 .main__history-of-agency-info {
-  padding-top: 31px / 557.6px * 100%;
-  padding-bottom: 31px / 557.6px * 100%;
-  padding-left: 126px / 1014px * 100%;
-  //   margin: 31px 0px 80px 126px;
+  @include adaptiv-value("padding-top", 31, 8, 1300, 0);
+  @include adaptiv-value("padding-bottom", 80, 20, 1300, 0);
+  @include adaptiv-value("padding-left", 126, 31.5, 1300, 0);
 }
 .main__history-of-agency-info-h1 {
-  @include fontsH1("Montserrat", 30px);
+  @include fontsH1(
+    "Montserrat",
+    calc(8px + (30 - 8) * ((100vw - 320px) / (1300 - 320)))
+  );
 }
 .green-rentangle {
   @extend %greenRentangle;
 }
 .main__history-of-agency-info-text {
-  @include fontsText("Open Sans", 16px);
-  margin-top: 28px * 100% / 557.6px;
-  margin-bottom: 28px;
-  max-width: 541px;
-  margin-right: 15px;
+  @include fontsText(
+    "Open Sans",
+    calc(4px + (16 - 4) * ((100vw - 320px) / (1300 - 320)))
+  );
+  @include adaptiv-value("padding-top", 28, 7, 1300, 0);
+  @include adaptiv-value("padding-right", 15, 4, 1300, 0);
+  @include adaptiv-value("padding-bottom", 26, 6.5, 1300, 0);
+  @include adaptiv-value("max-width", 541, 135.3, 1300, 0);
 }
 .main__history-of-agency-info-button {
   float: right;
-  width: 29.8%;
-  height: 17.3%;
-  @include fontsH1("Montserrat", 14px);
+  @include adaptiv-value("width", 166, 41.5, 1300, 0);
+  @include adaptiv-value("height", 51, 21.8, 1300, 0);
+  @include fontsH1(
+    "Montserrat",
+    calc(3px + (14 - 3) * ((100vw - 320px) / (1300 - 320)))
+  );
   color: #ffffff;
   background-color: #7beec7;
   border: none;
@@ -38,39 +46,15 @@
   }
 }
 
-.main__history-of-agency-image {
-  width: 100%;
+.main__history-of-agency-image img {
   height: auto;
+  width: 100%;
+  @include adaptiv-value("width", 459, 115, 1300, 0);
 }
 
-// @media (max-width: 1300px) {
-//   .main__history-of-agency {
-//     margin-top: 73px;
-//     margin-bottom: 99px;
-//   }
-//   .main__history-of-agency-info {
-//     //  margin: 31px 0px 80px 76px;
-//   }
-//   .main__history-of-agency-info-h1 {
-//     @include fontsH1("Montserrat", 20px);
-//   }
-//   .main__history-of-agency-info-text {
-//     @include fontsText("Open Sans", 13px);
-//     margin-top: 18px;
-//     margin-bottom: 18px;
-//     max-width: 441px;
-//     margin-right: 10px;
-//     line-height: 15px;
-//   }
-//   .main__history-of-agency-info-button {
-//     @include fontsH1("Montserrat", 9px);
-//     color: #ffffff;
-//   }
-// }
-// @media (max-width: 768px) {
-//   .main__history-of-agency-info-h1 {
-//     @include fontsH1("Montserrat", 10px);
-//   }
-// }
-// @media (max-width: 320px) {
-// }
+@media (max-width: 1300px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 320px) {
+}
