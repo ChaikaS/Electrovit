@@ -45,8 +45,8 @@
 .header__burger {
   display: block;
   position: relative;
-  width: 31px;
-  height: 15px;
+  @include adaptiv-value("width", 31, 7.75, 1300, 0);
+  @include adaptiv-value("height", 15, 3.75, 1300, 0);
   align-items: center;
   cursor: pointer;
 }
@@ -66,7 +66,7 @@
 }
 .header__burger::after {
   bottom: 0;
-  width: 23px;
+  @include adaptiv-value("width", 23, 5.75, 1300, 0);
 }
 .header__burger::before {
   top: 0;
@@ -75,9 +75,9 @@
   position: absolute;
   background-color: #60606e;
   left: 0;
-  width: 15px;
+  @include adaptiv-value("width", 15, 3.75, 1300, 0);
   height: 1px;
-  top: 7px;
+  @include adaptiv-value("top", 7, 1.75, 1300, 0);
 }
 
 @media (max-width: 1300px) {

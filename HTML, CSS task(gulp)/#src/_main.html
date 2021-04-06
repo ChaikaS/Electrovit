@@ -10,7 +10,17 @@
 
   <section class="main__history-of-agency">
     <div class="main__history-of-agency-image">
-      <img src="img/image main history Agency.svg" alt="image" />
+      <img id="myImg" src="img/image main history Agency.svg" alt="image" />
+      <div id="myModal">
+        <span
+          id="close"
+          onclick="document.getElementById('myModal').style.display='none'"
+        >
+          &times;
+        </span>
+        <img id="img01" />
+        <div id="caption"></div>
+      </div>
     </div>
 
     <div class="main__history-of-agency-info">
@@ -95,7 +105,7 @@
             <a href="">Product Design</a>
           </div>
           <div class="main__why-choose-us-menu-universal-item">
-            <a href=""><a href=""></a> Integrated ad Companies</a>
+            <a href="">Integrated ad Companies</a>
           </div>
         </menu>
         <menu class="main__why-choose-us-advantage-menu-e-commerge">
@@ -189,51 +199,42 @@
         </menu>
       </div>
       <div class="main__our-portfolio-category-gallery">
-        <img
-          class="main__our-portfolio-category-gallery-image1"
-          src="img/image portfolio 1.svg"
-          alt="image"
-        />
-        <img
-          class="main__our-portfolio-category-gallery-image2"
-          src="img/image portfolio 4.svg"
-          alt="image"
-        />
-        <img
-          class="main__our-portfolio-category-gallery-image3"
-          src="img/image portfolio 8.svg"
-          alt="image"
-        />
-        <img
-          class="main__our-portfolio-category-gallery-image4"
-          src="img/image portfolio 2.svg"
-          alt="image"
-        />
-        <img
-          class="main__our-portfolio-category-gallery-image5"
-          src="img/image portfolio 5.svg"
-          alt="image"
-        />
-        <img
-          class="main__our-portfolio-category-gallery-image6"
-          src="img/image portfolio 9.svg"
-          alt="image"
-        />
-        <img
-          class="main__our-portfolio-category-gallery-image7"
-          src="img/image portfolio 3.svg"
-          alt="image"
-        />
-        <img
-          class="main__our-portfolio-category-gallery-image8"
-          src="img/image portfolio 6.svg"
-          alt="image"
-        />
-        <img
-          class="main__our-portfolio-category-gallery-image9"
-          src="img/image portfolio 7.svg"
-          alt="image"
-        />
+        <div class="main__our-portfolio-category-gallery-column">
+          <div class="main__our-portfolio-category-gallery-image1">
+            <img src="img/image portfolio 1.svg" alt="image" />
+          </div>
+
+          <div class="main__our-portfolio-category-gallery-image4">
+            <img src="img/image portfolio 2.svg" alt="image" />
+          </div>
+          <div class="main__our-portfolio-category-gallery-image7">
+            <img src="img/image portfolio 3.svg" alt="image" />
+          </div>
+        </div>
+
+        <div class="main__our-portfolio-category-gallery-column">
+          <div class="main__our-portfolio-category-gallery-image2">
+            <img src="img/image portfolio 4.svg" alt="image" />
+          </div>
+          <div class="main__our-portfolio-category-gallery-image5">
+            <img src="img/image portfolio 5.svg" alt="image" />
+          </div>
+          <div class="main__our-portfolio-category-gallery-image8">
+            <img src="img/image portfolio 6.svg" alt="image" />
+          </div>
+        </div>
+
+        <div class="main__our-portfolio-category-gallery-column">
+          <div class="main__our-portfolio-category-gallery-image3">
+            <img src="img/image portfolio 8.svg" alt="image" />
+          </div>
+          <div class="main__our-portfolio-category-gallery-image6">
+            <img src="img/image portfolio 9.svg" alt="image" />
+          </div>
+          <div class="main__our-portfolio-category-gallery-image9">
+            <img src="img/image portfolio 7.svg" alt="image" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
