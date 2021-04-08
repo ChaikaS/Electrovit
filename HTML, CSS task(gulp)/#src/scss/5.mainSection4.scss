@@ -1,0 +1,112 @@
+.main__our-portfolio {
+   text-align: center;
+}
+.main__our-portfolio-info-h1 {
+   @include fontsH1("Montserrat", 30px);
+   padding-bottom: 29px;
+   div {
+      margin-left: 389px / 1010px * 100%;
+   }
+}
+.main__our-portfolio-info-text {
+   @include fontsText("Open Sans", 16px);
+   padding-bottom: 101px;
+   max-width: 765px;
+   margin: 0 auto;
+}
+.green-rentangle {
+   @extend %greenRentangle;
+   margin-top: -13px;
+}
+.main__our-portfolio-category {
+   display: flex;
+   justify-content: space-between;
+}
+.main__our-portfolio-category-h1 {
+   max-width: 170px;
+   @include fontsH1("Montserrat", 30px);
+   text-align: start;
+   line-height: 50px;    
+   margin-bottom: 48px;
+}
+.green-rentangle {
+   @extend %greenRentangle;
+   font-size: 14px;
+   text-transform: uppercase;
+   text-align: center;
+   color: #ffffff;
+   p {
+      font-family: "Montserrat";
+      transform: translateY(35%);
+   }
+}
+.main__our-portfolio-category-menu {
+   text-align: start;
+   margin-top: 34px;
+   margin-left: 20px;
+}
+.main__our-portfolio-category-menu-item {
+   @include fontsH1("Montserrat", 14px);
+   margin-bottom: 30px;
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+.main__our-portfolio-category-gallery {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-end;
+}
+.main__our-portfolio-category-gallery-image1 {
+   width: 262px;
+   height: 171px;
+   margin-right: 30px;
+   margin-bottom: 30px;
+}
+.main__our-portfolio-category-gallery-image2 {
+   width: 263px;
+   height: 175px;
+   margin-right: 30px;
+   margin-bottom: 26px;
+}
+.main__our-portfolio-category-gallery-image3 {
+   width: 260px;
+   height: 390px;
+   margin-bottom: 30px;
+}
+.main__our-portfolio-category-gallery-image4{
+   width: 264px;
+   height: 264px;
+   margin-bottom: 30px;
+   margin-right: 30px;
+   margin-top: -220px;
+}
+.main__our-portfolio-category-gallery-image5 {
+   width: 264px;
+   height: 396px;
+   margin-bottom: 30px;
+   margin-right: 35px;
+   margin-top: -220px;
+}
+.main__our-portfolio-category-gallery-image6 {
+   width: 259px;
+   height: 149px;
+   margin-left: -3px;
+   margin-bottom: 30px;
+}
+.main__our-portfolio-category-gallery-image7 {
+   width: 263px;
+   height: 394px;
+   margin-right: 30px;
+   margin-top: -130px;
+}
+.main__our-portfolio-category-gallery-image8 {
+   width: 261px;
+   height: 263px;
+}
+.main__our-portfolio-category-gallery-image9 {
+   width: 261px;
+   height: 149px;
+   margin-left: 30px;
+   margin-top: -27px;
+}

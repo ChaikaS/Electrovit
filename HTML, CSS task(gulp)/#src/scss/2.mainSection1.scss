@@ -1,0 +1,22 @@
+.main__creative-agency {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.main__creative-agency-were {
+   background-color: #7beec7;
+   @include fontsH1("Montserrat", 18px);
+   padding: 11px 21px 7px 21px;
+   margin-top: 173px;
+}
+.main__creative-agency-h1 {
+   @include fontsH1("Montserrat", 48px);
+   border: solid #60606e 7px;
+   padding: 33px 47px;
+   margin-bottom:30px ;
+}
+.main__creative-agency-info {
+   @include fontsText("Open Sans", 16px);
+   max-width: 540px;
+   text-align: center;
+}

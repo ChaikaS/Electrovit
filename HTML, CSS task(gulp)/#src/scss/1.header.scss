@@ -1,0 +1,26 @@
+.backgroung-header::after {
+   background-image: url("../img/background header.svg");
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   background-size: cover;
+   height: 933px;
+   content: "";
+   opacity: 0.3;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   z-index: -1;
+}
+.header {
+   display: flex;
+   justify-content: space-between;
+}
+.header__logo {
+   @include fontsH1("Montserrat", 18px);
+   transform: translateY(30%);
+}
+.header__menu {
+   transform: translateY(15%);
+}
