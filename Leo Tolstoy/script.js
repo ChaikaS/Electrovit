@@ -1,23 +1,123 @@
-let arr = [99, 46, 48, 31, 63, 47, 36, 48, 36, 49, 50, 31, 50, 59, 63, 38, 35, 31, 50, 59, 63, 45, 36, 46, 38, 40, 35, 31, 45, 45, 58, 53, 63, 47, 46, 35, 31, 48, 42, 46, 33, 63, 46, 50, 63, 38, 40, 39, 45, 40, 63, 31, 63, 49, 31, 44, 46, 44, 51, 63, 35, 36, 43, 31, 50, 59, 63, 38, 40, 39, 45, 59];
+let h1 = document.createElement("h1");
+h1.className = "title";
+h1.style.textAlign = "center";
+h1.innerHTML = "Сыграй в меня - получи полное наслаждение от жизни";
+document.body.append(h1);
 
-let sorts = (el, val) => {
-  if (!el[val]) {
-    el[val] = 1;
-  } else {
-    ++el[val];
+let conteiner = document.createElement("div");
+
+document.body.append(conteiner);
+conteiner.className = "conteiner";
+conteiner.style.width = "300px";
+conteiner.style.height = "300px";
+conteiner.style.display = "grid";
+conteiner.style.gridTemplateColumns = "100px 100px 100px";
+conteiner.style.gridTemplateRows = "100px 100px 100px";
+conteiner.style.border = "1px solid black";
+
+let div1 = document.createElement("div");
+document.body.append(div1);
+div1.className = "div";
+div1.style.backgroundColor = "cyan";
+conteiner.prepend(div1);
+div1.style.display = "flex";
+div1.style.width = "100%";
+div1.style.height = "100%";
+div1.style.alignItems = "center";
+div1.style.justifyContent = "center";
+div1.style.fontSize = "35px";
+div1.style.border = "1px solid black";
+
+let div2 = div1.cloneNode(true);
+document.body.append(div2);
+div1.className = "div";
+conteiner.prepend(div2);
+
+let div3 = div1.cloneNode(true);
+document.body.append(div3);
+div1.className = "div";
+conteiner.prepend(div3);
+
+let div4 = div1.cloneNode(true);
+document.body.append(div4);
+div1.className = "div";
+conteiner.prepend(div4);
+
+let div5 = div1.cloneNode(true);
+document.body.append(div5);
+div1.className = "div";
+conteiner.prepend(div5);
+
+let div6 = div1.cloneNode(true);
+document.body.append(div6);
+div1.className = "div";
+conteiner.prepend(div6);
+
+let div7 = div1.cloneNode(true);
+document.body.append(div7);
+div1.className = "div";
+conteiner.prepend(div7);
+
+let div8 = div1.cloneNode(true);
+document.body.append(div8);
+div1.className = "div";
+conteiner.prepend(div8);
+
+let div9 = div1.cloneNode(true);
+document.body.append(div9);
+div1.className = "div";
+conteiner.prepend(div9);
+
+conteiner = document.querySelector(".conteiner");
+
+let divs = document.querySelectorAll(".div");
+
+function start(divs) {
+  let i = 0;
+  for (let div of divs) {
+    div.addEventListener("click", function step() {
+      if (i % 2 == 0) {
+        this.innerHTML = "X";
+      } else {
+        this.innerHTML = "O";
+      }
+      this.removeEventListener("click", step);
+      if (i == 8) {
+        textResult = "ничьюшечка. Катани еще раз катку";
+        result();
+      }
+      check();
+      i++;
+    });
   }
-  return el;
-};
+}
+start(divs);
+let textResult = "";
+function check() {
+  let victoriousVariants = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let variant of victoriousVariants) {
+    if (divs[variant[0]].innerHTML == "X" && divs[variant[1]].innerHTML == "X" && divs[variant[2]].innerHTML == "X") {
+      textResult = "победили Xрестики. Юххууу!!";
+      result();
+    } else if (divs[variant[0]].innerHTML == "O" && divs[variant[1]].innerHTML == "O" && divs[variant[2]].innerHTML == "O") {
+      textResult = "победили Oлики. Ты большой молодец!";
+      result();
+    }
+  }
+}
+const body = document.body;
 
-let arrTimes = arr.reduce(sorts, {});
-console.log(arrTimes);
-
-let result = Object.entries(arrTimes).sort(function (a, b) {
-  return b[1] - a[1];
-});
-console.log(result);
-
-console.log(result[0]);
-console.log(result[1]);
-console.log(result[2]);
-console.log(result[3]);
+function result() {
+  conteiner.innerHTML = `${textResult}`;
+  body.style.backgroundColor = "grey";
+  // body.addEventListener("click", () => location.reload());
+}
