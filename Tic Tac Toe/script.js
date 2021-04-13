@@ -15,6 +15,7 @@ console.log(arrTimes);
 let result = Object.entries(arrTimes).sort(function (a, b) {
   return b[1] - a[1];
 });
+
 console.log(result);
 
 console.log(result[0]);
