@@ -10,14 +10,8 @@ let sorts = (el, val) => {
 };
 
 let arrTimes = arr.reduce(sorts, {});
-console.log(arrTimes);
 
-let result = Object.entries(arrTimes).sort(function (a, b) {
-  return b[1] - a[1];
-});
-console.log(result);
-
-console.log(result[0]);
-console.log(result[1]);
-console.log(result[2]);
-console.log(result[3]);
+Object.entries(arrTimes)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 4)
+  .forEach(([key, value]) => console.log(`${key}: ${value}`));
