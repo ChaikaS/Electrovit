@@ -1,7 +1,7 @@
 let h1 = document.createElement("h1");
 h1.className = "title";
 h1.style.textAlign = "center";
-h1.innerHTML = "Сыграй в меня - получи полное наслаждение от жизни";
+h1.innerHTML = "Сыграй в меня - получи полное наслаждение от жизни!";
 document.body.append(h1);
 
 let conteiner = document.createElement("div");
@@ -92,7 +92,9 @@ function start(divs) {
   }
 }
 start(divs);
+
 let textResult = "";
+
 function check() {
   let victoriousVariants = [
     [0, 1, 2],
