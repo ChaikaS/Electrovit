@@ -1,8 +1,8 @@
 @mixin fontsH1($fontFamily, $fontSize) {
-  text-transform: uppercase;
   color: #60606e;
   font-family: $fontFamily;
   font-size: $fontSize;
+  text-transform: uppercase;
 }
 
 @mixin fontsText($fontFamily, $fontSize) {
@@ -12,48 +12,31 @@
   line-height: normal;
 }
 
-@mixin adaptiv-value(
-  $property,
-  $startSize,
-  $minSize,
-  $maxWidthConteiner,
-  $type
-) {
+@mixin adaptiv-value($property, $startSize, $minSize, $maxWidthConteiner, $type) {
   $addSize: $startSize - $minSize;
   @if $type==1 {
     //только если меньше контейнера
     #{$property}: $startSize + px;
     @media (max-width: #{$maxWidthConteiner + px}) {
-      #{$property}: calc(
-        #{$minSize + px} + #{$addSize} *
-          ((100vw - 320px) / #{$maxWidthConteiner - 320})
-      );
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthConteiner - 320}));
     }
   } @else if $type==2 {
     //только если больше контейнера
     #{$property}: $startSize + px;
     @media (min-width: #{$maxWidthConteiner + px}) {
-      #{$property}: calc(
-        #{$minSize + px} + #{$addSize} *
-          ((100vw - 320px) / #{$maxWidthConteiner - 320})
-      );
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthConteiner - 320}));
     }
   } @else {
     //всегда
-    #{$property}: calc(
-      #{$minSize +
-        px} +
-        #{$addSize} *
-        ((100vw - 320px) / #{$maxWidthConteiner - 320})
-    );
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthConteiner - 320}));
   }
 }
 
 %greenRentangle {
   width: calc(17.25px + (67 - 17.25) * ((100vw - 320px) / (1300 - 320)));
   height: calc(5.5px + (22 - 5.5) * ((100vw - 320px) / (1300 - 320)));
-  background-color: #7beec7;
   margin-top: calc(-3.5px + (-14 + 3.5) * ((100vw - 320px) / (1300 - 320)));
+  background-color: #7beec7;
 }
 
 @import "0.nullStyle.scss";

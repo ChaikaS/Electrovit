@@ -1,9 +1,9 @@
 window.onload = function () {
-  let imgArr = document.getElementsByClassName("my__img");
-  let modalWindow = document.getElementById("my__modal");
-  let modalImg = document.getElementById("img01");
-  let caption = document.getElementById("caption");
-  let closes = document.getElementById("close");
+  let imgArr = document.getElementsByClassName("img-window");
+  let modalWindow = document.getElementById("modal-window");
+  let modalImg = document.getElementById("img-modal-window");
+  let caption = document.getElementById("caption-modal-window");
+  let closes = document.getElementById("close-modal-window");
   let modalBlock = document.getElementById("modal__block");
 
   for (i = 0; i < imgArr.length; i++) {
@@ -31,5 +31,12 @@ window.onload = function () {
     modalBlock.style.transform = "translateY(-500%)";
     setTimeout(close, 500);
   };
+};
+;
+document.querySelector(".main__sending-form-button-button").onclick = function () {
+  window.open("http://google.com");
+};
+document.querySelector(".main__sending-form-email-button").onclick = function () {
+  window.open("http://kvn.ru");
 };
 ;

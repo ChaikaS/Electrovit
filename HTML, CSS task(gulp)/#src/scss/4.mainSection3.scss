@@ -4,11 +4,8 @@
 .main__why-choose-us-info {
   text-align: center;
 }
-.main__why-choose-us-info-h1 {
-  @include fontsH1(
-    "Montserrat",
-    calc(7.5px + (30 - 7.5) * ((100vw - 320px) / (1300 - 320)))
-  );
+.main__why-choose-us-info-heading {
+  @include fontsH1("Montserrat", calc(7.5px + (30 - 7.5) * ((100vw - 320px) / (1300 - 320))));
   div {
     margin-left: 38.3%;
   }
@@ -17,14 +14,11 @@
   @extend %greenRentangle;
 }
 .main__why-choose-us-info-text {
+  margin: 0 auto;
   @include adaptiv-value("padding-top", 29, 7.25, 1300, 0);
   @include adaptiv-value("padding-bottom", 101, 26, 1300, 0);
   @include adaptiv-value("max-width", 717, 179.2, 1300, 0);
-  @include fontsText(
-    "Open Sans",
-    calc(4px + (16 - 4) * ((100vw - 320px) / (1300 - 320)))
-  );
-  margin: 0 auto;
+  @include fontsText("Open Sans", calc(4px + (16 - 4) * ((100vw - 320px) / (1300 - 320))));
 }
 
 .main__why-choose-us-advantage {
@@ -34,7 +28,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 60%;
-
   @include adaptiv-value("margin-top", 20, 5, 1300, 0);
   @include adaptiv-value("margin-bottom", 20, 9.8, 1300, 0);
 }
@@ -53,22 +46,16 @@
 .main__why-choose-us-advantage-menu-customizable-design {
   width: 50%;
 }
-.main__why-choose-us-menu-universal-h1 {
-  @include fontsH1(
-    "Montserrat",
-    calc(5px + (18 - 5) * ((100vw - 320px) / (1300 - 320)))
-  );
+.main__why-choose-us-menu-universal-heading {
   @include adaptiv-value("margin-top", 19, 4.7, 1300, 0);
   @include adaptiv-value("margin-bottom", 18, 4.5, 1300, 0);
+  @include fontsH1("Montserrat", calc(5px + (18 - 5) * ((100vw - 320px) / (1300 - 320))));
 }
 .main__why-choose-us-menu-universal-item {
   @include adaptiv-value("margin-bottom", 11, 2.8, 1300, 0);
-  @include fontsText(
-    "Open Sans",
-    calc(3px + (14 - 3) * ((100vw - 320px) / (1300 - 320)))
-  );
-  text-transform: uppercase;
   color: #999999;
+  @include fontsText("Open Sans", calc(3px + (14 - 3) * ((100vw - 320px) / (1300 - 320))));
+  text-transform: uppercase;
   &:last-child {
     margin-bottom: 0;
   }
@@ -83,12 +70,5 @@
 
 .main__why-choose-us-advantage-menu-icon img {
   height: auto;
-  width: 100%;
   @include adaptiv-value("width", 28, 7, 1300, 0);
-}
-@media (max-width: 1300px) {
-}
-@media (max-width: 768px) {
-}
-@media (max-width: 320px) {
 }
