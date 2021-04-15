@@ -1,9 +1,9 @@
 window.onload = function () {
-  let imgArr = document.getElementsByClassName("my__img");
-  let modalWindow = document.getElementById("my__modal");
-  let modalImg = document.getElementById("img01");
-  let caption = document.getElementById("caption");
-  let closes = document.getElementById("close");
+  let imgArr = document.getElementsByClassName("img-window");
+  let modalWindow = document.getElementById("modal-window");
+  let modalImg = document.getElementById("img-modal-window");
+  let caption = document.getElementById("caption-modal-window");
+  let closes = document.getElementById("close-modal-window");
   let modalBlock = document.getElementById("modal__block");
 
   for (i = 0; i < imgArr.length; i++) {

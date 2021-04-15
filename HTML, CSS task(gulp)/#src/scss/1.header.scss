@@ -8,61 +8,58 @@
 }
 
 .backgroung-header::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include adaptiv-value("height", 865, 217, 1300, 0);
   background-image: url("../img/background header.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
-  @include adaptiv-value("height", 865, 217, 1300, 0);
-  content: "";
   opacity: 0.3;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+  content: "";
 }
 .header {
   display: flex;
-  justify-content: space-between;
   width: 100%;
+  justify-content: space-between;
   align-items: center;
 }
 .header::before {
-  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100px;
+  content: "";
 }
 .header__logo {
-  @include fontsH1(
-    "Montserrat",
-    calc(4px + (18 - 4) * ((100vw - 320px) / (1300 - 320)))
-  );
   z-index: 2;
+  @include fontsH1("Montserrat", calc(4px + (18 - 4) * ((100vw - 320px) / (1300 - 320))));
 }
 .header__burger {
-  display: block;
   position: relative;
+  display: block;
   @include adaptiv-value("width", 31, 7.75, 1300, 0);
   @include adaptiv-value("height", 15, 3.75, 1300, 0);
   align-items: center;
   cursor: pointer;
 }
 .header__burger:hover {
+  color: #60606e;
   transform: rotate(360deg);
   transition-duration: 1s;
-  color: #60606e;
 }
 .header__burger::before,
 .header__burger::after {
-  content: "";
-  background-color: #60606e;
   position: absolute;
+  left: 0;
   width: 100%;
   height: 1px;
-  left: 0;
+  background-color: #60606e;
+  content: "";
 }
 .header__burger::after {
   bottom: 0;
@@ -73,16 +70,9 @@
 }
 .header__burger span {
   position: absolute;
-  background-color: #60606e;
   left: 0;
   @include adaptiv-value("width", 15, 3.75, 1300, 0);
-  height: 1px;
   @include adaptiv-value("top", 7, 1.75, 1300, 0);
-}
-
-@media (max-width: 1300px) {
-}
-@media (max-width: 768px) {
-}
-@media (max-width: 320px) {
+  height: 1px;
+  background-color: #60606e;
 }

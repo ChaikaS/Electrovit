@@ -1,21 +1,18 @@
 .footer {
-  @include adaptiv-value("padding-top", 50, 12.5, 1300, 0);
   display: flex;
   justify-content: space-between;
+  @include adaptiv-value("padding-top", 50, 12.5, 1300, 0);
 }
 .footer__nav {
   display: flex;
-  list-style-type: "-";
   @include adaptiv-value("margin-left", -15, -3.75, 1300, 0);
+  list-style-type: "-";
 }
 .footer__nav-link {
-  @include fontsText(
-    "Open Sans",
-    calc(3.5px + (14 - 3.5) * ((100vw - 320px) / (1300 - 320)))
-  );
-  color: #9a9a9a;
-  text-transform: uppercase;
   @include adaptiv-value("padding-right", 15, 3.75, 1300, 0);
+  color: #9a9a9a;
+  @include fontsText("Open Sans", calc(3.5px + (14 - 3.5) * ((100vw - 320px) / (1300 - 320))));
+  text-transform: uppercase;
   &:first-child {
     list-style: none;
   }
@@ -28,13 +25,10 @@
   color: #9a9a9a;
 }
 .footer__author {
-  @include fontsText(
-    "Open Sans",
-    calc(3.5px + (14 - 3.5) * ((100vw - 320px) / (1300 - 320)))
-  );
-  color: #9a9a9a;
-  text-transform: uppercase;
   @include adaptiv-value("margin-bottom", 29, 9.75, 1300, 0);
+  color: #9a9a9a;
+  @include fontsText("Open Sans", calc(3.5px + (14 - 3.5) * ((100vw - 320px) / (1300 - 320))));
+  text-transform: uppercase;
 }
 .footer__social {
   display: flex;
@@ -42,19 +36,12 @@
   flex-direction: row;
 }
 .footer__social-icons {
-  cursor: pointer;
   @include adaptiv-value("margin-left", 17, 4.25, 1300, 0);
   @include adaptiv-value("width", 16, 4, 1300, 0);
   @include adaptiv-value("height", 16, 4, 1300, 0);
+  cursor: pointer;
 }
 .footer__social-icons img {
   width: 100%;
   height: auto;
-}
-
-@media (max-width: 1300px) {
-}
-@media (max-width: 768px) {
-}
-@media (max-width: 320px) {
 }
