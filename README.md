@@ -1,3 +1,1 @@
-# Lesson 7. inheritance
-
-
+# Lesson. HTML_CSS_task

@@ -1,0 +1,67 @@
+@mixin fontsH1($fontFamily, $fontSize) {
+  text-transform: uppercase;
+  color: #60606e;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+}
+
+@mixin fontsText($fontFamily, $fontSize) {
+  color: #60606e;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: normal;
+}
+
+@mixin adaptiv-value(
+  $property,
+  $startSize,
+  $minSize,
+  $maxWidthConteiner,
+  $type
+) {
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+    //только если меньше контейнера
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxWidthConteiner + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} *
+          ((100vw - 320px) / #{$maxWidthConteiner - 320})
+      );
+    }
+  } @else if $type==2 {
+    //только если больше контейнера
+    #{$property}: $startSize + px;
+    @media (min-width: #{$maxWidthConteiner + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} *
+          ((100vw - 320px) / #{$maxWidthConteiner - 320})
+      );
+    }
+  } @else {
+    //всегда
+    #{$property}: calc(
+      #{$minSize +
+        px} +
+        #{$addSize} *
+        ((100vw - 320px) / #{$maxWidthConteiner - 320})
+    );
+  }
+}
+
+%greenRentangle {
+  width: calc(17.25px + (67 - 17.25) * ((100vw - 320px) / (1300 - 320)));
+  height: calc(5.5px + (22 - 5.5) * ((100vw - 320px) / (1300 - 320)));
+  background-color: #7beec7;
+  margin-top: calc(-3.5px + (-14 + 3.5) * ((100vw - 320px) / (1300 - 320)));
+}
+
+@import "0.nullStyle.scss";
+@import "1.header.scss";
+@import "2.mainSection1.scss";
+@import "3.mainSection2.scss";
+@import "4.mainSection3.scss";
+@import "5.mainSection4.scss";
+@import "6.mainSection5.scss";
+@import "7.footer.scss";
+@import "8.popup.scss";

@@ -1,0 +1,120 @@
+.main__sending-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.main__sending-form-wrapper::after {
+  @include adaptiv-value("margin-top", -50, -16.5, 1300, 0);
+  background-position: 0 0;
+  content: "";
+  @include adaptiv-value("height", 318, 80.75, 1300, 0);
+  opacity: 1;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-color: #7beec7;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__sending-form {
+  @include adaptiv-value("margin-top", 154, 38.5, 1300, 0);
+  @include adaptiv-value("padding-top", 51, 12.75, 1300, 0);
+  @include adaptiv-value("padding-bottom", 50, 12, 1300, 0);
+}
+.main__sending-form-button-h1 {
+  @include adaptiv-value("max-width", 500, 125, 1300, 0);
+  @include adaptiv-value("margin-bottom", 28, 7, 1300, 0);
+  @include fontsH1(
+    "Montserrat",
+    calc(7.5px + (30 - 7.5) * ((100vw - 320px) / (1300 - 320)))
+  );
+  line-height: calc(12.5px + (50 - 12.5) * ((100vw - 320px) / (1300 - 320)));
+  color: #ffffff;
+}
+.main__sending-form-button-button {
+  @include adaptiv-value("width", 166, 41.5, 1300, 0);
+  @include adaptiv-value("height", 51, 12.75, 1300, 0);
+  @include fontsH1(
+    "Montserrat",
+    calc(3px + (14 - 3) * ((100vw - 320px) / (1300 - 320)))
+  );
+  color: #7beec7;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+  &:hover {
+    background-color: #18b5a4;
+  }
+}
+.main__sending-form-email {
+  @include adaptiv-value("padding-top", 21, 5.25, 1300, 0);
+  @include adaptiv-value("padding-bottom", 18, 4.5, 1300, 0);
+  @include adaptiv-value("padding-left", 27, 6.75, 1300, 0);
+  @include adaptiv-value("padding-right", 26, 6.5, 1300, 0);
+  background-color: #fff;
+}
+.main__sending-form-email-form {
+  display: flex;
+}
+.main__sending-form-email-h1 {
+  @include fontsH1(
+    "Montserrat",
+    calc(6px + (24 - 6) * ((100vw - 320px) / (1300 - 320)))
+  );
+  @include adaptiv-value("margin-bottom", 18, 4.5, 1300, 0);
+  line-height: calc(9.25px + (37 - 9.25) * ((100vw - 320px) / (1300 - 320)));
+}
+.main__sending-form-email-text {
+  @include adaptiv-value("max-width", 472, 118, 1300, 0);
+  @include fontsText(
+    "Open Sans",
+    calc(4px + (16 - 4) * ((100vw - 320px) / (1300 - 320)))
+  );
+  @include adaptiv-value("margin-bottom", 28, 7, 1300, 0);
+  color: #999999;
+}
+.main__sending-form-email-button {
+  float: right;
+  width: 32.8%;
+  @include adaptiv-value("height", 51, 12.75, 1300, 0);
+  @include fontsH1(
+    "Montserrat",
+    calc(3.5px + (14 - 3.5) * ((100vw - 320px) / (1300 - 320)))
+  );
+  color: #ffffff;
+  background-color: #7beec7;
+  border: none;
+  transition: all 0.5s ease 0s;
+  &:hover {
+    background-color: #18b5a4;
+  }
+}
+.main__sending-form-email-email {
+  width: 67.2%;
+  border-color: #d3cfcf;
+  @include adaptiv-value("height", 51, 12.75, 1300, 0);
+  &::placeholder {
+    @include fontsH1(
+      "Montserrat",
+      calc(3px + (12 - 3) * ((100vw - 320px) / (1300 - 320)))
+    );
+    @include adaptiv-value("padding-left", 10, 2.5, 1300, 0);
+    color: #cdcdcd;
+  }
+  &:hover {
+    border-color: #7beec7;
+  }
+  @include fontsText(
+    "Open Sans",
+    calc(4.1px + (17 - 4.1) * ((100vw - 320px) / (1300 - 320)))
+  );
+}
+@media (max-width: 1300px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 320px) {
+}

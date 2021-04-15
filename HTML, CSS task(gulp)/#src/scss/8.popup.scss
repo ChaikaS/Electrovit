@@ -1,0 +1,77 @@
+.my__img {
+  cursor: pointer;
+  transition: 0.1s;
+}
+.my__img:hover {
+  opacity: 0.7;
+}
+#my__modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#modal__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  transform: translateY(-200%);
+  transition: all 3s ease;
+}
+#img01 {
+  margin-top: 25vh;
+  max-width: 50vw;
+  max-height: 50vh;
+  @include adaptiv-value("width", 700, 150, 1300, 0);
+  @include adaptiv-value("height", 700, 150, 1300, 0);
+}
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  height: 150px;
+}
+#modal__block,
+#caption {
+  animation-duration: 1s;
+  animation-name: zoom;
+}
+#close {
+  z-index: 50;
+  color: #f1f1f1;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+#close:hover,
+#close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

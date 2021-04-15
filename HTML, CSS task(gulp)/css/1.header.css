@@ -1,0 +1,24 @@
+.backgroungHeader::after {
+  background-image: url("../img/background header.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  height: 850px;
+  content: "";
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
