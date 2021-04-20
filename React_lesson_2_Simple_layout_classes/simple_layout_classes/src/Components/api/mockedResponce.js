@@ -1,0 +1,58 @@
+export const mockedResponce = [
+  {
+    id: "vwPassatB1",
+    model: "B1",
+    title: "Passat B1",
+    imageUrl: "./../src/Image/volkswagen-passat-b1.jpg",
+    engine: "1.6L",
+  },
+  {
+    id: "vwPassatB2",
+    model: "B2",
+    title: "Passat B2",
+    imageUrl: "./../src/Image/volkswagen-passat-b2.jpg",
+    engine: "1.8L",
+  },
+  {
+    id: "vwPassatB3",
+    model: "B3",
+    title: "Passat B3",
+    imageUrl: "./../src/Image/volkswagen-passat-b3.jpg",
+    engine: "1.8Mono",
+  },
+  {
+    id: "vwPassatB4",
+    model: "B4",
+    title: "Passat B4",
+    imageUrl: "./../src/Image/volkswagen-passat-b4.jpg",
+    engine: "2.0Mono",
+  },
+  {
+    id: "vwPassatB5",
+    model: "B5",
+    title: "Passat B5",
+    imageUrl: "./../src/Image/volkswagen-passat-b5.jpg",
+    engine: "2.2L",
+  },
+  {
+    id: "vwPassatB6",
+    model: "B6",
+    title: "Passat B6",
+    imageUrl: "./../src/Image/volkswagen-passat-b6.jpg",
+    engine: "2.5L",
+  },
+  {
+    id: "vwPassatB7",
+    model: "B7",
+    title: "Passat B7",
+    imageUrl: "./../src/Image/volkswagen-passat-b7.jpg",
+    engine: "2.3L",
+  },
+  {
+    id: "vwPassatB8",
+    model: "B8",
+    title: "Passat B8",
+    imageUrl: "./../src/Image/volkswagen-passat-b8.jpg",
+    engine: "2.0L",
+  },
+];
