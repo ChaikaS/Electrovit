@@ -1,9 +1,9 @@
 import "./App.scss";
-import Header from "./Components/Header/Header";
-import Content from "./Components/Content/content";
-import Footer from "./Components/Footer/Footer";
+import Header from "../Header/Header";
+import Content from "../Content/content";
+import Footer from "../Footer/Footer";
 
-function App({ userDate }) {
+export default function App({ userDate }) {
   const user = userDate.user;
   const avatar = userDate.avatar;
   return (
@@ -14,5 +14,3 @@ function App({ userDate }) {
     </div>
   );
 }
-
-export default App;

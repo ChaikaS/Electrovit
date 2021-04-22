@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "./index.scss";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import contentImages from "./pokemon.jpg";
+import contentImages from "./Images/pokemon.jpg";
+import App from "./Components/App/App";
 
 const image = <img src={contentImages} alt={""} />;
 const store = {
