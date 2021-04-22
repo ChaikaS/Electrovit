@@ -1,6 +1,7 @@
 import React from "react";
 import { apiCall } from "../api/mockedApi";
 import Card from "./Card";
+import "./cardConteiner.scss";
 
 export default class CardsConteiner extends React.Component {
   constructor(props) {
@@ -22,9 +23,9 @@ export default class CardsConteiner extends React.Component {
     console.log(this.state);
 
     return (
-      <div>
+      <div className="main__card-conteiner">
         {this.state.cards.map((card) => (
-          <Card key={card.id} model={card} />
+          <Card key={card.id} card={card} />
         ))}
       </div>
     );
