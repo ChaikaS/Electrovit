@@ -20,8 +20,6 @@ export default class CardsConteiner extends React.Component {
   }
 
   render() {
-    console.log(this.state);
-
     return (
       <div className="main__card-conteiner">
         {this.state.cards.map((card) => (

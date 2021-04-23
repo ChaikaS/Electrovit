@@ -1,6 +1,6 @@
 import "./App.scss";
 import Header from "../Header/Header";
-import Content from "../Main/main";
+import Main from "../Main/main";
 import Footer from "../Footer/Footer";
 
 export default function App({ userDate }) {
@@ -9,7 +9,7 @@ export default function App({ userDate }) {
   return (
     <div>
       <Header user={user} />
-      <Content avatar={avatar} />
+      <Main avatar={avatar} />
       <Footer />
     </div>
   );
