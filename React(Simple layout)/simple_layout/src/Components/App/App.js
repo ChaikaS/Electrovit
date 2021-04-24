@@ -4,8 +4,9 @@ import Content from "../Content/content";
 import Footer from "../Footer/Footer";
 
 export default function App({ userDate }) {
-  const user = userDate.user;
   const avatar = userDate.avatar;
+  const user = userDate.user;
+
   return (
     <div>
       <Header user={user} />
