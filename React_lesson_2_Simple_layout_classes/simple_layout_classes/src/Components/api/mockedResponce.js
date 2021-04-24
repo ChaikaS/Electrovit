@@ -48,11 +48,19 @@ export const mockedResponce = [
     imageUrl: "https://autoiwc.ru/images/volkswagen/volkswagen-passat-b7.jpg",
     engine: "2.3L",
   },
+
   {
     id: "vwPassatB8",
     model: "B8",
     title: "Passat B8",
     imageUrl: "https://autoiwc.ru/images/volkswagen/volkswagen-passat.jpg",
+    engine: "2.0L",
+  },
+  {
+    id: "vwPassatB9",
+    model: "B9",
+    title: "Passat B9",
+    imageUrl: "https://www.autoradar.top/wp-content/uploads/2020/01/Volkswagen-Passat-B9_new.jpg",
     engine: "2.0L",
   },
 ];

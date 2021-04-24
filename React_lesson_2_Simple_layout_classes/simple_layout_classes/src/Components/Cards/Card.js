@@ -1,3 +1,4 @@
+import "./card.scss";
 import CardEngine from "./CardsObject/CardEngine";
 import CardTitle from "./CardsObject/CardTitle";
 import CardModel from "./CardsObject/CardModel";
@@ -13,7 +14,7 @@ export default function Card({ card }) {
   console.log(imageUrl);
 
   return (
-    <div>
+    <div className="main__card">
       <CardModel model={model} />
       <CardTitle title={title} />
       <CardImageUrl image={imageUrl} />

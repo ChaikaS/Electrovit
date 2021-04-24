@@ -3,12 +3,11 @@ import { mockedResponce } from "./mockedResponce";
 export const apiCall = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (true) {
+      if (Math.random() > 0.5) {
         resolve({ mockedResponce });
       } else {
-        reject(console.log("faled"));
+        reject("No cards yet");
       }
     }, 1500);
   });
 };
-apiCall();
