@@ -1,5 +1,5 @@
 import React from "react";
-import { apiCall } from "../api/mockedApi";
+import { apiCall } from "../../api/mockedApi";
 import Card from "./Card";
 import "./cardConteiner.scss";
 import { CardError } from "./CardsObject/CardError";
