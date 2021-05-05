@@ -1,9 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { mockedResponce } from "../../../api/mockedResponce";
-import Card from "../Card";
-import CardsConteiner from "../CardsContainer";
+import React, { useState } from "react";
 
-export default function CardsCreationForm({ setCards }) {
+export default function CardsCreationForm(props) {
   const [values, setValues] = useState({
     model: "",
     title: "",
@@ -48,17 +45,12 @@ export default function CardsCreationForm({ setCards }) {
     engine: `${values.engine}`,
   };
 
-  const handleForm = (e) => {
-    e.preventDefault();
+  const handleChange = () => {
     if (values.model && values.title && values.imageUrl && values.engine) {
-      setValid(true);
-      setShowClickButton(true);
-      mockedResponce.push(newObject);
-      setCards(mockedResponce);
+      props.handleAddCards(newObject);
     } else {
       setValid(false);
       setShowClickButton(false);
-      setCards(mockedResponce);
     }
   };
 
@@ -66,41 +58,12 @@ export default function CardsCreationForm({ setCards }) {
 
   const [showClickButton, setShowClickButton] = useState(false);
 
-  console.log(newObject);
-  console.log(mockedResponce);
-
-  // export default function CardRemove({ setCards }) {
-  //   const [list, setList] = useState(mockedResponce);
-  //   const handlerRemoveCard = (e) => {
-  //     const delValues = e.target.getAttribute("model");
-  //     setList(list.filter((item) => item.delValues !== delValues));
-  //   };
-  //   <div>
-  //     {list.map((item) => {
-  //       return (
-  //         (
-  //           <span delValues={item.delValues} onClick={handlerRemoveCard}>
-  //             xzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  //           </span>
-  //         ),
-  //         (<span>{item.delValues}</span>)
-  //       );
-  //     })}
-  //   </div>;
-
-  //   return <span>123</span>;
-  // }
-
-  // const [list, setList] = useState(setCards(mockedResponce));
-  // console.log(list);
-
   return (
     <div className="main__create-card">
       {
-        <form onSubmit={handleForm}>
+        <form>
           {showClickButton && valid ? <div className="success-message">Success! You added new cards. You can added new card</div> : null}
           {!showClickButton && !valid ? <div className="success-message">Created a new cards</div> : null}
-
           <input type="text" value={values.model} placeholder={"model"} name="model" onChange={handleModelInputChange} />
           {showClickButton && valid && !values.model ? <span id="model-error">Please enter a model</span> : null}
           <br />
@@ -113,7 +76,8 @@ export default function CardsCreationForm({ setCards }) {
           <input type="text" value={values.engine} placeholder={"engine "} name="engine" onChange={handleEngineInputChange} />
           {showClickButton && valid && !values.engine && <span id="engine-error">Please enter a engine</span>}
           <br />
-          <button onClick={() => setCards([mockedResponce])}>Click</button>
+
+          <button onClick={handleChange}>Click</button>
         </form>
       }
     </div>
