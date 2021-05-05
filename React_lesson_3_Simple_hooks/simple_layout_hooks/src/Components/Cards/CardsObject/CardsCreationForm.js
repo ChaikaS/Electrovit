@@ -45,14 +45,33 @@ export default function CardsCreationForm(props) {
     engine: `${values.engine}`,
   };
 
-  const handleChange = () => {
+  const handleChange = (e) => {
     if (values.model && values.title && values.imageUrl && values.engine) {
+      e.preventDefault();
       props.handleAddCards(newObject);
+      setValid(true);
+      setShowClickButton(true);
+      setValues({
+        model: "",
+        title: "",
+        imageUrl: "",
+        engine: "",
+      });
     } else {
       setValid(false);
       setShowClickButton(false);
     }
   };
+
+  // const clearObject = (e) => {
+  //   e.preventDefault();
+  //   props.setCards({
+  //     model: "",
+  //     title: "",
+  //     imageUrl: "",
+  //     engine: "",
+  //   });
+  // };
 
   const [valid, setValid] = useState(false);
 
