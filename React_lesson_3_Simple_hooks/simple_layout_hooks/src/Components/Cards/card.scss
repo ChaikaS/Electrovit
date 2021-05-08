@@ -1,0 +1,35 @@
+.main__card {
+  padding-top: 10px;
+}
+.main__card img {
+  width: 350px;
+  height: 261px;
+}
+.main__create-card {
+  padding-top: 10px;
+  width: 350px;
+  height: 335px;
+}
+.main__create-card input {
+  margin-top: 20px;
+}
+
+.main__card-model {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__card-model div {
+  padding-left: 23px;
+  width: calc(100%);
+}
+
+.main__card-model button {
+  color: #27c596;
+  display: inline;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+  border: 0;
+  background-color: #fff;
+}
