@@ -1,0 +1,46 @@
+.loginPage__form {
+  margin-top: 450px;
+}
+
+.loginPage__form_logo {
+  margin-top: 50px;
+  text-align: left;
+}
+.loginPage__form_text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 30px;
+  padding-top: 10px;
+  background-color: #27c596;
+  border: 0;
+  border-radius: 35px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.loginPage__form_input {
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.loginPage__form_input input {
+  width: 350px;
+  height: 35px;
+}
+.loginPage__form_button {
+  text-align: left;
+}
+.loginPage__form_button button {
+  width: 355px;
+  height: 40px;
+  background-color: #27c596;
+  border: 0;
+  border-radius: 35px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.loginPage__form_button button:hover {
+  background-color: rgb(33, 181, 153);
+}
