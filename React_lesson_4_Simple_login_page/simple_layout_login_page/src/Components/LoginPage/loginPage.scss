@@ -1,14 +1,11 @@
 .loginPage__form {
-  margin-top: 450px;
+  margin-top: 350px;
 }
 
-.loginPage__form_logo {
-  margin-top: 50px;
-  text-align: left;
-}
 .loginPage__form_text {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 358px;
   height: 30px;
   padding-top: 10px;
   background-color: #27c596;
@@ -21,14 +18,15 @@
 
 .loginPage__form_input {
   text-align: left;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .loginPage__form_input input {
   width: 350px;
   height: 35px;
 }
 .loginPage__form_button {
+  margin-top: 10px;
   text-align: left;
 }
 .loginPage__form_button button {

@@ -1,5 +1,11 @@
 import "./profile.scss";
-export default function Profile() {
+import { Redirect } from "react-router-dom";
+
+export default function Profile({ auth }) {
+  if (!auth) {
+    return <Redirect to="/loginPage" />;
+  }
+
   return (
     <form className="profile__wrapper">
       <div className="profile__wrapper_item">

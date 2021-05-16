@@ -1,18 +1,13 @@
 import "./App.scss";
-import Header from "../Header/Header";
-import Main from "../Main/main";
-import Footer from "../Footer/Footer";
 import { Route, BrowserRouter as Router, Link, Switch } from "react-router-dom";
 import Profile from "../Profile/Profile";
 import { useState } from "react";
 import LoginPage from "../LoginPage/LoginPage";
+import CardsConteiner from "../Cards/CardsContainer";
 
 export default function App() {
-  const [token, setToken] = useState();
-
-  if (!token) {
-    return <LoginPage setToken={setToken} />;
-  }
+  const [token, setToken] = useState(false);
+  const toggle = () => setToken(!token);
 
   return (
     <Router>
@@ -27,17 +22,10 @@ export default function App() {
         </div>
 
         <Switch>
-          <Route path="/profile" render={() => <Profile />} />
-          <Route
-            path="/app"
-            render={() => (
-              <div>
-                <Header />
-                <Main />
-                <Footer />
-              </div>
-            )}
-          />
+          <Route exact path="/loginPage" render={() => <LoginPage token={token} setToken={setToken} toggle={toggle} />} />
+
+          <Route path="/profile" render={() => <Profile auth={token} />} />
+          <Route path="/app" render={() => <CardsConteiner auth={token} />} />
         </Switch>
       </div>
     </Router>
