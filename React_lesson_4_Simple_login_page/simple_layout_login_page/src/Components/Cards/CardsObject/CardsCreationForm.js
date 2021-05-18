@@ -10,32 +10,11 @@ export default function CardsCreationForm(props) {
     engine: "",
   });
 
-  const handleModelInputChange = (e) => {
+  const handleCardsInputChange = (e) => {
     e.persist();
     setValues({
       ...values,
-      model: e.target.value,
-    });
-  };
-  const handleTitleInputChange = (e) => {
-    e.persist();
-    setValues({
-      ...values,
-      title: e.target.value,
-    });
-  };
-  const handleImageUrlInputChange = (e) => {
-    e.persist();
-    setValues({
-      ...values,
-      imageUrl: e.target.value,
-    });
-  };
-  const handleEngineInputChange = (e) => {
-    e.persist();
-    setValues({
-      ...values,
-      engine: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -75,26 +54,26 @@ export default function CardsCreationForm(props) {
         <form className="main__create-card_form">
           {showClickButton && valid ? <div className="success-message">Success! You added new cards. You can added new card</div> : null}
           {!showClickButton && !valid ? <div className="success-message">Created a new cards</div> : null}
-          <input type="text" value={values.model} placeholder={"model"} name="model" onChange={handleModelInputChange} />
+          <input type="text" value={values.model} placeholder={"model"} name="model" onChange={handleCardsInputChange} />
 
           {showClickButton && valid && !values.model ? (
             <div className="main__create-card_text-error" id="model-error">
               Please enter a model
             </div>
           ) : null}
-          <input type="text" value={values.title} placeholder={"title"} name="title" onChange={handleTitleInputChange} />
+          <input type="text" value={values.title} placeholder={"title"} name="title" onChange={handleCardsInputChange} />
           {showClickButton && valid && !values.title && (
             <div className="main__create-card_text-error" id="title-error">
               Please enter a title
             </div>
           )}
-          <input type="text" value={values.imageUrl} placeholder={"imageUrl"} name="imageUrl" onChange={handleImageUrlInputChange} />
+          <input type="text" value={values.imageUrl} placeholder={"imageUrl"} name="imageUrl" onChange={handleCardsInputChange} />
           {showClickButton && valid && !values.imageUrl && (
             <div className="main__create-card_text-error" id="imageUrl-error">
               Please enter a imageUrl
             </div>
           )}
-          <input type="text" value={values.engine} placeholder={"engine "} name="engine" onChange={handleEngineInputChange} />
+          <input type="text" value={values.engine} placeholder={"engine "} name="engine" onChange={handleCardsInputChange} />
           {showClickButton && valid && !values.engine && (
             <div className="main__create-card_text-error" id="engine-error">
               Please enter a engine

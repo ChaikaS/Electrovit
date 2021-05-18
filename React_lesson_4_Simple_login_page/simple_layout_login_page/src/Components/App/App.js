@@ -22,7 +22,7 @@ export default function App() {
         </div>
 
         <Switch>
-          <Route exact path="/loginPage" render={() => <LoginPage token={token} setToken={setToken} toggle={toggle} />} />
+          <Route exact path="/" render={() => <LoginPage token={token} setToken={setToken} toggle={toggle} />} />
 
           <Route path="/profile" render={() => <Profile auth={token} />} />
           <Route path="/app" render={() => <CardsConteiner auth={token} />} />
