@@ -7,24 +7,19 @@ import Card from "./Card";
 import "./cardConteiner.scss";
 import { CardError } from "./CardsObject/CardError";
 import CardsCreationForm from "./CardsObject/CardsCreationForm";
-import { useDispatch, useStore, useSelector } from "react-redux";
-import { createCards, removeCards } from "../../store/actions/cardsActions";
+import { useDispatch } from "react-redux";
+import { createCards, removeCards, showCards } from "../../store/actions/cardsActions";
 
 export default function CardsConteiner({ auth }) {
   const [cards, setCards] = useState([]);
-  console.log(cards);
-
-  const store = useStore();
-  const cardss = useSelector((state) => state.cardss.concat(cards));
-
-  console.log(store.getState());
-  console.log(cardss);
 
   const dispatch = useDispatch();
 
   const [isApiCallError, setIsApiCallError] = useState(false);
 
   useEffect(() => {
+    dispatch(getCardsThunk());
+
     apiCall()
       .then((data) => {
         setCards(data.mockedResponce);
@@ -32,7 +27,15 @@ export default function CardsConteiner({ auth }) {
       .catch((dataError) => {
         setIsApiCallError({ dataError, isApiCallError: true });
       });
-  }, []);
+  }, [dispatch]);
+
+  function getCardsThunk() {
+    return function (dispatch) {
+      apiCall().then((data) => {
+        dispatch(showCards(data.mockedResponce));
+      });
+    };
+  }
 
   const handleError = (e) => {
     e.preventDefault();

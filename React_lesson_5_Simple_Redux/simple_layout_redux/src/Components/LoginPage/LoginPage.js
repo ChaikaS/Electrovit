@@ -1,18 +1,34 @@
 import { useState } from "react";
 import "./loginPage.scss";
 import { Redirect } from "react-router";
+import { useDispatch } from "react-redux";
+import { createLoginPage } from "../../store/actions/loginActions";
 
 export default function LoginPage({ token, setToken, toggle }) {
-  const [userName, setUserName] = useState();
-  const [password, setPassword] = useState();
+  const [loginInfo, setLoginInfo] = useState({
+    userName: "",
+    password: "",
+  });
+
+  const dispatch = useDispatch();
+
+  const handleLoginPageInputChange = (e) => {
+    e.persist();
+    setLoginInfo({
+      ...loginInfo,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handlerSubmit = (e) => {
-    if (userName && password) {
-      e.preventDefault();
+    e.preventDefault();
+    if (loginInfo.userName && loginInfo.password) {
+      dispatch(createLoginPage(loginInfo));
       setToken({
-        userName,
-        password,
+        loginInfo,
       });
+    } else {
+      setToken(false);
     }
   };
   if (token) {
@@ -20,18 +36,18 @@ export default function LoginPage({ token, setToken, toggle }) {
   }
 
   return (
-    <form className="loginPage__form" onSubmit={handlerSubmit}>
+    <form className="loginPage__form">
       <div className="loginPage__form_text">Welcom to Volkswagen World</div>
 
       <div className="loginPage__form_input">
-        <input type="text" onChange={(e) => setUserName(e.target.value)} placeholder="Login"></input>
+        <input type="text" value={loginInfo.userName} name="userName" onChange={handleLoginPageInputChange} placeholder="Login"></input>
       </div>
 
       <div className="loginPage__form_input">
-        <input type="text" onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
+        <input type="text" value={loginInfo.password} name="password" onChange={handleLoginPageInputChange} placeholder="Password"></input>
       </div>
       <div className="loginPage__form_button">
-        <button onClick={toggle}>Enter</button>
+        <button onClick={handlerSubmit}>Enter</button>
       </div>
     </form>
   );

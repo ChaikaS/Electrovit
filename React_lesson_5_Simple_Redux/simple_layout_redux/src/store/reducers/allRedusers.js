@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import cardss from "../reducers/cardsReducer";
+import cards from "../reducers/cardsReducer";
 import profile from "../reducers/profileReducer";
 import loginPage from "../reducers/loginReducer";
 
 const allReducers = combineReducers({
-  cardss,
+  cards,
   profile,
   loginPage,
 });

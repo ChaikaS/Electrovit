@@ -9,7 +9,6 @@ export default function CardsCreationForm(props) {
     imageUrl: "",
     engine: "",
   });
-  console.log(values);
 
   const handleCardsInputChange = (e) => {
     e.persist();
