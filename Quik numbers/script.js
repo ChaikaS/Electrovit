@@ -58,33 +58,3 @@ async function polishNotation(values) {
   }
   return (document.querySelector("#result").textContent = stack);
 }
-
-// async function wait() {
-//   await new Promise((resolve) => setTimeout(resolve, 2000));
-//   function summ() {
-//     return 5;
-//   }
-//   return summ();
-// }
-
-// function f() {
-//   wait().then((result) => console.log(result));
-// }
-// f();
-// function click(values) {
-//    let stack = [];
-//    values.split(" ").map((el) => {
-//      stack.push(el * 2);
-//    });
-//    document.write(stack);
-//  }
-
-// function diff() {
-//   stack.push(Number(secondNumber) - Number(firtsNumber));
-// }
-// function multiply() {
-//   stack.push(Number(firtsNumber) * Number(secondNumber));
-// }
-// function divide() {
-//   stack.push(Number(secondNumber) / Number(firtsNumber));
-// }
