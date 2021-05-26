@@ -1,18 +1,18 @@
-export const ADD_CARDS = "ADD_CARDS";
+export const ADD_CARD = "ADD_CARD";
 export const REMOVE_CARDS = "REMOVE_CARDS";
-export const SHOW_CARDS = "SHOW_CARDS";
+export const ADD_CARDS_STORE = "ADD_CARDS_STORE";
 
 export function createCards(data) {
   return {
-    type: ADD_CARDS,
+    type: ADD_CARD,
     payload: {
       data,
     },
   };
 }
-export function showCards(data) {
+export function addCardsStore(data) {
   return {
-    type: SHOW_CARDS,
+    type: ADD_CARDS_STORE,
     payload: {
       data,
     },

@@ -8,7 +8,7 @@ import "./cardConteiner.scss";
 import { CardError } from "./CardsObject/CardError";
 import CardsCreationForm from "./CardsObject/CardsCreationForm";
 import { useDispatch } from "react-redux";
-import { createCards, removeCards, showCards } from "../../store/actions/cardsActions";
+import { createCards, removeCards, addCardsStore } from "../../store/actions/cardsActions";
 
 export default function CardsConteiner({ auth }) {
   const [cards, setCards] = useState([]);
@@ -32,7 +32,7 @@ export default function CardsConteiner({ auth }) {
   function getCardsThunk() {
     return function (dispatch) {
       apiCall().then((data) => {
-        dispatch(showCards(data.mockedResponce));
+        dispatch(addCardsStore(data.mockedResponce));
       });
     };
   }
