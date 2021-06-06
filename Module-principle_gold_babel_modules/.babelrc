@@ -1,0 +1,36 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3,
+        "targets": "> 0.25%, not dead"
+      }
+    ]
+  ],
+  "plugins": ["@babel/plugin-proposal-class-properties", "@babel/transform-runtime", "@babel/plugin-syntax-dynamic-import"]
+}
+// {
+//   "presets": [
+//     [
+//       "@babel/preset-env",
+//       {
+//         "useBuiltIns": "usage",
+//         "corejs": 3,
+//         "targets": {
+//           "firefox": "64",
+//           "opera": "57",
+//           "chrome": "71",
+//           "edge": "44",
+//           "ie": "11"
+//         }
+//       }
+//     ]
+//   ],
+//   "plugins": ["@babel/plugin-transform-modules-commonjs", "@babel/plugin-transform-runtime", "@babel/plugin-proposal-export-default-from"]
+// }
+// {
+//   "presets": ["@babel/preset-env",],
+//   "plugins": [["@babel/transform-runtime"]]
+// }
